@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PSD TO HTML</title>
+	
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<style>
+		a{
+			color: darkblue;
+		}
+		a:hover{
+			color: lightgreen;
+		}
+		li a .nav-link{
+			padding: 5%;
+		}
+		.navbar-nav .nav-item .nav-link{
+			padding: 5px 40px;
+		}
+		/* .navbar{
+			background-image: url(images/nav-bg-05.png);
+			background-size: cover;
+		} */
+		/*.appointment{
+			background-image: url(images/schedule-appointment.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 280px;
+		}*/
+		.appointment{
+			position: relative;
+			width: 100%;
+			height: 300px;
+			background-color: darkgray;
+		}
+		.image-schedule{
+			opacity: 1;
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		.appointment:hover .image-schedule{
+			opacity: .5;
+		}
+		.appointment:hover .middle{
+			opacity: 1;
+		}
+		.middle{
+			transition: .5s ease;
+		  	opacity: 0;
+		  	position: absolute;
+		  	top: 50%;
+		  	left: 50%;
+		  	transform: translate(-50%, -50%);
+		  	-ms-transform: translate(-50%, -50%);
+		  	text-align: center;
+		}
+		.button-schedule{
+			background-color: #4CAF50;
+			color: white;
+			font-size: 16px;
+			padding: 16px 32px;
+		}
+		.btn{
+			margin: 40% auto;
+			background-color: lightgreen;
+			color: #fefefe;
+			width: 88%;
+		}
+		.review{
+			background-image: url(images/review-bg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			margin-bottom: -1%;
+		}
+		.myfooter{
+			background-image: url(images/footer-bg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			color: #fff;
+		}
+		.myfooter2{
+			background-image: url(images/footer2-bg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			color: #fff;
+			padding: 1%;
+		}
+		.fab{
+			padding: 1% 1%;
+			margin: 0% 1%;
+			border-radius: 5px;
+		}
+		.column{
+			color: #fff;
+			padding: 0px 10px;
+		}
+		.top-nav{
+			background-color: #ddd;
+		}
+		.logo{
+			margin-top: -3%;
+		}
+	</style>
+</head>
+<body>
+	<div class="top-nav">
+		<div class="container bg-warning">
+			<div class="row" style="float: right;">
+				<div class="column" style="background-color: darkblue;">
+					Schedule Appointment
+				</div>
+				<div class="column" style="background-color: lightgreen;">
+					(803) 787-7050
+				</div>
+			</div>
+		</div>
+	</div><br>
+	<nav class="navbar navbar-expand-sm bg-light border">
+		<div class="container">
+			<!-- <div class="topright">
+				<div class="row">
+					<div class="column" style="background-color: darkblue;">
+						Schedule Appointment
+					</div>
+					<div class="column" style="background-color: lightgreen;">
+						(803) 787-7050
+					</div>
+				</div>
+			</div> -->
+		  	<a class="navbar-brand logo" href="#"><img src="images/logo.png" width="70%" height="90px"></a>
+		  	<button class="navbar-toggler border navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			</button>
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    	<ul class="navbar-nav mr-auto">
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="#" style="color: lightgreen;">Services <span class="sr-only">(current)</span></a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="#">Who We Serve</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="#">Attorney Referrals</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="#">New Patients</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="#">About Us</a>
+			      	</li>
+		    	</ul>
+		  	</div>
+		</div>
+	</nav>
+	<div class="header-bg">
+		<img src="images/header-bg.png" width="100%">
+	</div>
+	<div class="container">
+		<p style="text-align: right; color: #ddd;">home-services</p><br>
+		<div class="row">
+			<div class="col-sm-9">
+				<h1 style="color: lightgreen;">Chiropractic Services</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla <br><br><img src="images/doc.png" style="float: right"> pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna</p>
+				<h2 style="color: lightgreen;">Lorem ipsum dolor sit amet</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br><br>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+				</ul>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				<a href="#" style="color: lightgreen;">cillum dolore eu fugiat nulla</a>
+			</div>
+			<div class="col-sm-3">
+				<div class="card" style="width: 100%;">
+				  	<div class="card-header" style="background-color: darkblue; color: #fff;">
+				    	Services
+				  	</div>
+				  	<ul class="list-group list-group-flush">
+					    <li class="list-group-item">Chiropractic Manipulation</li>
+					    <li class="list-group-item">Digital Radiography</li>
+					    <li class="list-group-item">Modalities</li>
+					    <li class="list-group-item">Medical Services</li>
+					    <li class="list-group-item">DOT Physicals</li>
+				  	</ul>
+				</div><br>
+				<div class="appointment">
+					<img class="image-schedule" src="images/schedule-appointment.png" width="100%" height="100%">
+					<div class="middle">
+						<button class="btn btn-sm button-schedule">SCHEDULE AN APPOINTMENT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<footer>
+		<div class="review">
+			<div class="container">
+				<p style="text-align: center; padding: 3% 0px;"><span style="font-size: 50px;">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <span style="font-size: 50px;">"</span> veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>PETER ELLIAS JOSE</p>
+			</div>
+		</div>
+		<div class="myfooter">
+			<div class="container">
+				<div class="row" style="padding: 7% 0px;">
+					<div class="col-md-4">
+						<iframe width="100%" height="337px" id="gmap_canvas" src="https://maps.google.com/maps?q=cebu%20city&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					</div>
+					<div class="col-md-8">
+						Fields Chiropractic Clinics, PA<br>
+						(803) 787-7050 phone<br>
+						(803) 787-0502 fax<br>
+						3830 Devline Street | Columbia, SC 29203 satellite office<br>
+						&nbsp; <span style="font-size: 13px;">* this address is by appointment only</span><br><br>
+						<a href="#"><i class="fab fa-facebook border text-light"></i></a>
+						<a href="#"><i class="fab fa-instagram border text-light"></i></a>
+						<a href="#"><i class="fab fa-youtube border text-light"></i></a><br><br>
+						<h5>Main Office Hours</h5>
+						<div class="row">
+							<div class="col-sm-6">
+								Monday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:30-4:30<br>
+								Tuesday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8:00-5:30<br>
+								Wednesday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:30-4:30
+							</div>
+							<div class="col-sm-6">
+								Thursday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8:00-5:30<br>
+								Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8:00-5:00<br>
+								Saturday/Sunday &nbsp; Closed
+							</div>
+						</div>
+						<a class="border" href="#" style="padding: 1px 10px; border-radius: 2px; border-color: #ddd; color: #fff; background-color: darkblue; opacity: .7; text-decoration: none">SCHEDULE AN APPOINTMENT</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="myfooter2">
+			<div class="container">
+				<center>
+					<span>&reg;2018 Fields Chiropractic Clinics, PA. All Rights Reserved. Privacy Policy. Sitemap</span><br>
+					<span>Website Designed By: splash</span>
+				</center>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
